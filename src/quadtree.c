@@ -25,6 +25,17 @@ node_contains_(quadtree_node_t *outer, quadtree_point_t *it) {
            && outer->bounds->se->y <= it->y;
 }
 
+
+static int
+node_contains_node_(quadtree_node_t *outer, quadtree_node_t *node) {
+    return outer->bounds != NULL
+           && outer->bounds->nw->x <= node->bounds->nw->x
+           && outer->bounds->nw->y >= node->bounds->nw->y
+           && outer->bounds->se->x >= node->bounds->se->x
+           && outer->bounds->se->y <= node->bounds->se->y;
+}
+
+
 static void
 elision_(void *key) {}
 
@@ -247,9 +258,34 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
 }
 
 // find parent node of query node
-// query point (x, y)
+// node is query node
 quadtree_node_t *
-quadtree_search_parentnode(quadtree_node_t *root, double x, double y) {
+quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
+    if (node_contains_node_(root, node)) {
+        if(root->nw == node) return root->nw;
+        if(root->ne == node) return root->ne;
+        if(root->se == node) return root->se;
+        if(root->sw == node) return root->sw;
+
+        if (node_contains_node_(root->nw, node)) {
+            quadtree_search_parentnode(root->nw, node);
+        }
+
+        if (node_contains_node_(root->ne, node)) {
+            quadtree_search_parentnode(root->ne, node);
+        }
+
+        if (node_contains_node_(root->sw, node)) {
+            quadtree_search_parentnode(root->se, node);
+        }
+
+        if (node_contains_node_(root->se, node)) {
+            quadtree_search_parentnode(root->sw, node);
+        }
+
+    } else {
+        return NULL;
+    }
 
     return NULL;
 }

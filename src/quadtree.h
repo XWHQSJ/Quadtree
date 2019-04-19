@@ -106,7 +106,8 @@ quadtree_walk(quadtree_node_t *root,
 quadtree_node_t *
 quadtree_search_querynode(quadtree_node_t *root, double x, double y);
 
-
+quadtree_node_t *
+quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node);
 
 
 #ifdef __cplusplus
