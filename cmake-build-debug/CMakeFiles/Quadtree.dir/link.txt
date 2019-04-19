@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Quadtree.dir/src/bounds.c.o CMakeFiles/Quadtree.dir/src/node.c.o CMakeFiles/Quadtree.dir/src/point.c.o CMakeFiles/Quadtree.dir/src/quadtree.c.o CMakeFiles/Quadtree.dir/test.c.o  -o Quadtree 

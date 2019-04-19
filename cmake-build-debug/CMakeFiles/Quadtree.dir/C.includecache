@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wanhuixu/Quadtree/src/bounds.c
+quadtree.h
+/home/wanhuixu/Quadtree/src/quadtree.h
+float.h
+-
+math.h
+-
+
+/home/wanhuixu/Quadtree/src/node.c
+quadtree.h
+/home/wanhuixu/Quadtree/src/quadtree.h
+
+/home/wanhuixu/Quadtree/src/point.c
+quadtree.h
+/home/wanhuixu/Quadtree/src/quadtree.h
+
+/home/wanhuixu/Quadtree/src/quadtree.c
+quadtree.h
+/home/wanhuixu/Quadtree/src/quadtree.h
+stdio.h
+-
+
+/home/wanhuixu/Quadtree/src/quadtree.h
+stdlib.h
+-
+math.h
+-
+
+/home/wanhuixu/Quadtree/test.c
+assert.h
+-
+stdio.h
+-
+src/quadtree.h
+/home/wanhuixu/Quadtree/src/quadtree.h
+
