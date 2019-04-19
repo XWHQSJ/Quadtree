@@ -208,15 +208,36 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         }
 
         if (node_contains_(root->ne, it_point)) {
-
+            if ((root->ne->nw == NULL) &&
+                (root->ne->ne == NULL) &&
+                (root->ne->sw == NULL) &&
+                (root->ne->se == NULL)) {
+                return root->ne;
+            } else {
+                return quadtree_search_querynode(root->ne, x, y);
+            }
         }
 
         if (node_contains_(root->sw, it_point)) {
-
+            if ((root->se->nw == NULL) &&
+                (root->se->ne == NULL) &&
+                (root->se->sw == NULL) &&
+                (root->se->se == NULL)) {
+                return root->se;
+            } else {
+                return quadtree_search_querynode(root->se, x, y);
+            }
         }
 
         if (node_contains_(root->se, it_point)) {
-
+            if ((root->sw->nw == NULL) &&
+                (root->sw->ne == NULL) &&
+                (root->sw->sw == NULL) &&
+                (root->sw->se == NULL)) {
+                return root->sw;
+            } else {
+                return quadtree_search_querynode(root->sw, x, y);
+            }
         }
     } else {
         return NULL;
@@ -224,4 +245,14 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
 
     return NULL;
 }
+
+// find parent node of query node
+// query point (x, y)
+quadtree_node_t *
+quadtree_search_parentnode(quadtree_node_t *root, double x, double y) {
+
+    return NULL;
+}
+
+
 

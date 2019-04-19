@@ -30,7 +30,7 @@ int main(int argc, const char *argv[])
     // printf("search point is (%f, %f)\n", point->x, point->y);
 
     printf("------\n");
-    quadtree_node_t *node = quadtree_search_querynode(tree->root, 2.0, 6.0);
+    quadtree_node_t *node = quadtree_search_querynode(tree->root, 6.0, 6.0);
     printf("node the (width, height) is (%f, %f)\n", node->bounds->width, node->bounds->height);
     printf("------\n");
 

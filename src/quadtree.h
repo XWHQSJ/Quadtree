@@ -31,7 +31,7 @@ typedef struct quadtree_node {
     struct quadtree_node *sw;
     quadtree_bounds_t *bounds;
     quadtree_point_t *point;
-    int count;
+    // int count;
     void *key;
 } quadtree_node_t;
 
