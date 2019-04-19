@@ -1,9 +1,8 @@
-cmake_minimum_required(VERSION 3.13)
-project(quadtree)
+cmake_minimum_required(VERSION 3.12)
+project(Quadtree C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
 include_directories(src)
 
 add_executable(Quadtree
@@ -12,4 +11,4 @@ add_executable(Quadtree
         src/point.c
         src/quadtree.c
         src/quadtree.h
-        test.c)
+        main.c)

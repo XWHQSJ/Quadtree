@@ -6,39 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/wanhuixu/Quadtree/src/bounds.c
-quadtree.h
-/home/wanhuixu/Quadtree/src/quadtree.h
-float.h
+E:/workspace/C++/Quadtree/main.c
+stdio.h
 -
-math.h
--
+src/quadtree.h
+E:/workspace/C++/Quadtree/src/quadtree.h
 
-/home/wanhuixu/Quadtree/src/node.c
+E:/workspace/C++/Quadtree/src/quadtree.c
 quadtree.h
-/home/wanhuixu/Quadtree/src/quadtree.h
-
-/home/wanhuixu/Quadtree/src/point.c
-quadtree.h
-/home/wanhuixu/Quadtree/src/quadtree.h
-
-/home/wanhuixu/Quadtree/src/quadtree.c
-quadtree.h
-/home/wanhuixu/Quadtree/src/quadtree.h
+E:/workspace/C++/Quadtree/src/quadtree.h
 stdio.h
 -
 
-/home/wanhuixu/Quadtree/src/quadtree.h
+E:/workspace/C++/Quadtree/src/quadtree.h
 stdlib.h
 -
 math.h
 -
-
-/home/wanhuixu/Quadtree/test.c
-assert.h
--
-stdio.h
--
-src/quadtree.h
-/home/wanhuixu/Quadtree/src/quadtree.h
 

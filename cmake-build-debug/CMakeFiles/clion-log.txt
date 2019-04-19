@@ -1,4 +1,4 @@
-/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wanhuixu/Quadtree
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" E:\workspace\C++\Quadtree
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/wanhuixu/Quadtree/cmake-build-debug
+-- Build files have been written to: E:/workspace/C++/Quadtree/cmake-build-debug

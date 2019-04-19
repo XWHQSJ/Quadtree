@@ -12,6 +12,12 @@ quadtree_node_ispointer(quadtree_node_t *node) {
 }
 
 int
+quadtree_node_partent(quadtree_node_t *node){
+    return 0;
+}
+
+
+int
 quadtree_node_isempty(quadtree_node_t *node) {
     return node->nw == NULL
            && node->ne == NULL

@@ -195,16 +195,33 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     it_point->x = x;
     it_point->y = y;
 
-    if(!node_contains_(root, it_point)){
-        return NULL;
+    if (node_contains_(root, it_point)) {
+        if (node_contains_(root->nw, it_point)) {
+            if ((root->nw->nw == NULL) &&
+                (root->nw->ne == NULL) &&
+                (root->nw->sw == NULL) &&
+                (root->nw->se == NULL)) {
+                return root->nw;
+            } else {
+                return quadtree_search_querynode(root->nw, x, y);
+            }
+        }
+
+        if (node_contains_(root->ne, it_point)) {
+
+        }
+
+        if (node_contains_(root->sw, it_point)) {
+
+        }
+
+        if (node_contains_(root->se, it_point)) {
+
+        }
     } else {
-        if(!node_contains_(root->nw, it_point)) return NULL;
-        if(!node_contains_(root->ne, it_point)) return NULL;
-        if(!node_contains_(root->sw, it_point)) return NULL;
-        if(!node_contains_(root->se, it_point)) return NULL;
+        return NULL;
     }
 
-    
-
-
+    return NULL;
 }
+

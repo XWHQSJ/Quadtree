@@ -4,17 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/wanhuixu/Quadtree/src/bounds.c" "/home/wanhuixu/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/bounds.c.o"
-  "/home/wanhuixu/Quadtree/src/node.c" "/home/wanhuixu/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/node.c.o"
-  "/home/wanhuixu/Quadtree/src/point.c" "/home/wanhuixu/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/point.c.o"
-  "/home/wanhuixu/Quadtree/src/quadtree.c" "/home/wanhuixu/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/quadtree.c.o"
-  "/home/wanhuixu/Quadtree/test.c" "/home/wanhuixu/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/test.c.o"
+  "E:/workspace/C++/Quadtree/main.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/main.c.obj"
+  "E:/workspace/C++/Quadtree/src/bounds.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/bounds.c.obj"
+  "E:/workspace/C++/Quadtree/src/node.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/node.c.obj"
+  "E:/workspace/C++/Quadtree/src/point.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/point.c.obj"
+  "E:/workspace/C++/Quadtree/src/quadtree.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/quadtree.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../."
   "../src"
   )
 

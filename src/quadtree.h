@@ -103,6 +103,11 @@ quadtree_walk(quadtree_node_t *root,
               void (*descent)(quadtree_node_t *node),
               void (*ascent)(quadtree_node_t *node));
 
+quadtree_node_t *
+quadtree_search_querynode(quadtree_node_t *root, double x, double y);
+
+
+
 
 #ifdef __cplusplus
 }
