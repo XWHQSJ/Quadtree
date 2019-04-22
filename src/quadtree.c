@@ -58,6 +58,15 @@ get_quadrant_(quadtree_node_t *root, quadtree_point_t *point) {
 }
 
 
+static quadtree_node_t *
+get_quadrant_node_(quadtree_node_t *root, quadtree_node_t *node) {
+    if(node_contains_node_(root->nw, node)) return root->nw;
+    if(node_contains_node_(root->ne, node)) return root->ne;
+    if(node_contains_node_(root->sw, node)) return root->sw;
+    if(node_contains_node_(root->se, node)) return root->se;
+    return NULL;
+}
+
 static int
 split_node_(quadtree_t *tree, quadtree_node_t *node) {
     quadtree_node_t *nw;
@@ -199,6 +208,7 @@ quadtree_walk(quadtree_node_t *root, void (*descent)(quadtree_node_t *node),
 
 // find query node who contain query point
 // query point(x, y)
+// return parent node of point
 quadtree_node_t *
 quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     quadtree_point_t *it_point;
@@ -259,13 +269,14 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
 
 // find parent node of query node
 // node is query node
+// return parent node of query node
 quadtree_node_t *
 quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
     if (node_contains_node_(root, node)) {
-        if(root->nw == node) return root->nw;
-        if(root->ne == node) return root->ne;
-        if(root->se == node) return root->se;
-        if(root->sw == node) return root->sw;
+        if (root->nw == node) return root->nw;
+        if (root->ne == node) return root->ne;
+        if (root->se == node) return root->se;
+        if (root->sw == node) return root->sw;
 
         if (node_contains_node_(root->nw, node)) {
             quadtree_search_parentnode(root->nw, node);
@@ -285,6 +296,29 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
 
     } else {
         return NULL;
+    }
+
+    return NULL;
+}
+
+// search points of parent node
+// the node is parent node
+// return points in parent node
+quadtree_point_t *
+quadtree_search_points(quadtree_node_t *rootnode) {
+    if (!rootnode) {
+        return NULL;
+    }
+    if (quadtree_node_isleaf(rootnode)) {
+        return rootnode->point;
+    } else if (rootnode->nw != NULL) {
+        quadtree_search_points(rootnode->nw);
+    } else if (rootnode->ne != NULL) {
+        quadtree_search_points(rootnode->ne);
+    } else if (rootnode->sw != NULL) {
+        quadtree_search_points(rootnode->sw);
+    } else if (rootnode->se != NULL) {
+        quadtree_search_points(rootnode->se);
     }
 
     return NULL;
