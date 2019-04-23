@@ -70,10 +70,10 @@ get_quadrant_(quadtree_node_t *root, quadtree_point_t *point) {
 
 static quadtree_node_t *
 get_quadrant_node_(quadtree_node_t *root, quadtree_node_t *node) {
-    if(node_contains_node_(root->nw, node)) return root->nw;
-    if(node_contains_node_(root->ne, node)) return root->ne;
-    if(node_contains_node_(root->sw, node)) return root->sw;
-    if(node_contains_node_(root->se, node)) return root->se;
+    if (node_contains_node_(root->nw, node)) return root->nw;
+    if (node_contains_node_(root->ne, node)) return root->ne;
+    if (node_contains_node_(root->sw, node)) return root->sw;
+    if (node_contains_node_(root->se, node)) return root->se;
     return NULL;
 }
 
@@ -314,7 +314,7 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
 
 // search points of parent node
 // the node is parent node
-// return points in parent node
+// return the points in the parent node
 quadtree_point_t **
 quadtree_search_points(quadtree_node_t *rootnode) {
 
@@ -326,29 +326,31 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 
     if (quadtree_node_isleaf(rootnode)) {
 
-        count_point++;
         pPoints[count_point] = rootnode->point;
-
-        return pPoints;
+        count_point++;
     }
 
     if (rootnode->nw != NULL) {
-        quadtree_search_points(rootnode->nw);
+        return quadtree_search_points(rootnode->nw);
     }
 
     if (rootnode->ne != NULL) {
-        quadtree_search_points(rootnode->ne);
+        return quadtree_search_points(rootnode->ne);
     }
 
     if (rootnode->sw != NULL) {
-        quadtree_search_points(rootnode->sw);
+        return quadtree_search_points(rootnode->sw);
     }
 
     if (rootnode->se != NULL) {
-        quadtree_search_points(rootnode->se);
+        return quadtree_search_points(rootnode->se);
     }
 
-    return NULL;
+    if (KEY <= count_point) {
+        return pPoints;
+    }
+
+    return pPoints;
 }
 
 

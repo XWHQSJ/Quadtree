@@ -114,6 +114,7 @@ quadtree_search_points(quadtree_node_t *rootnode);
 
 
 #define K_1 1024
+#define KEY 2
 
 static int count_point = 0;
 quadtree_point_t **pPoints;
