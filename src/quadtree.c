@@ -304,20 +304,36 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
 // search points of parent node
 // the node is parent node
 // return points in parent node
-quadtree_point_t *
+quadtree_point_t **
 quadtree_search_points(quadtree_node_t *rootnode) {
+
+    pPoints = malloc(K_1 * sizeof(**pPoints));
+
     if (!rootnode) {
         return NULL;
     }
+
     if (quadtree_node_isleaf(rootnode)) {
-        return rootnode->point;
-    } else if (rootnode->nw != NULL) {
+
+        count_point++;
+        pPoints[count_point] = rootnode->point;
+
+        return pPoints;
+    }
+
+    if (rootnode->nw != NULL) {
         quadtree_search_points(rootnode->nw);
-    } else if (rootnode->ne != NULL) {
+    }
+
+    if (rootnode->ne != NULL) {
         quadtree_search_points(rootnode->ne);
-    } else if (rootnode->sw != NULL) {
+    }
+
+    if (rootnode->sw != NULL) {
         quadtree_search_points(rootnode->sw);
-    } else if (rootnode->se != NULL) {
+    }
+
+    if (rootnode->se != NULL) {
         quadtree_search_points(rootnode->se);
     }
 
