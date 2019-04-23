@@ -206,7 +206,7 @@ quadtree_walk(quadtree_node_t *root, void (*descent)(quadtree_node_t *node),
     (*ascent)(root);
 }
 
-// find query node who contain query point
+// search query node who contain query point
 // query point(x, y)
 // return parent node of point
 quadtree_node_t *
@@ -267,8 +267,9 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     return NULL;
 }
 
-// find parent node of query node
-// node is query node
+// search parent node of query node
+// the root is tree main parent node
+// the node is query node
 // return parent node of query node
 quadtree_node_t *
 quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
