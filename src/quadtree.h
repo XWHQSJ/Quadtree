@@ -112,11 +112,18 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node);
 quadtree_point_t **
 quadtree_search_points(quadtree_node_t *rootnode);
 
+double
+compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point);
 
-#define K_1 1024
+double
+compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se);
+
+
+#define K_1 20
 #define KEY 2
 
 static int count_point = 0;
+
 quadtree_point_t **pPoints;
 
 

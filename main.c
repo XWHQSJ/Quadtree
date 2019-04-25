@@ -84,6 +84,8 @@ int main(int argc, const char *argv[]) {
     printf("------\n");
 
 
+
+
     // quadtree_walk(tree->root, ascent, descent);
     quadtree_free(tree);
 

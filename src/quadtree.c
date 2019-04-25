@@ -226,6 +226,10 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     it_point->x = x;
     it_point->y = y;
 
+    if(!root) {
+        return NULL;
+    }
+
     if (node_contains_(root, it_point)) {
         if (node_contains_(root->nw, it_point)) {
             if ((root->nw->nw == NULL) &&
@@ -283,6 +287,10 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
 // return parent node of query node
 quadtree_node_t *
 quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
+
+    if(!root) {
+        return NULL;
+    }
 
     if (!node_contains_node_(root, node)) {
         return NULL;
@@ -353,5 +361,104 @@ quadtree_search_points(quadtree_node_t *rootnode) {
     return pPoints;
 }
 
+// search the nearest point of the query point
+// the root is tree main parent node
+// return the nearest point
+quadtree_point_t *
+quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
+    quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
 
+    double distance = 0;
+    double distance_nw = 0;
+    double distance_ne = 0;
+    double distance_sw = 0;
+    double distance_se = 0;
+
+
+    if(!querynode) {
+        return NULL;
+    }
+
+    if(querynode->point != NULL){
+        return querynode->point;
+    }
+
+    if(node_parent_q != NULL) {
+        if( node_parent_q->nw->point != NULL) {
+            distance_nw = compute_point_distance(node_parent_q->nw->point, querynode->point);
+
+            pPoints[0] = node_parent_q->nw->point;
+        }
+
+        if (node_parent_q->ne->point != NULL) {
+            distance_ne = compute_point_distance(node_parent_q->ne->point, querynode->point);
+
+            pPoints[1] = node_parent_q->ne->point;
+        }
+
+        if(node_parent_q->sw->point != NULL) {
+            distance_sw = compute_point_distance(node_parent_q->sw->point, querynode->point);
+
+            pPoints[2] = node_parent_q->sw->point;
+        }
+
+        if(node_parent_q->se->point != NULL) {
+            distance_se = compute_point_distance(node_parent_q->se->point, querynode->point);
+
+            pPoints[3] = node_parent_q->se->point;
+        }
+
+        distance = compare_point_distance(distance_nw, distance_ne, distance_sw, distance_se);
+
+        if (distance == distance_nw) {
+            return pPoints[0];
+        } else if (distance == distance_ne) {
+            return pPoints[1];
+        } else if (distance == distance_sw) {
+            return pPoints[2];
+        } else {
+            return pPoints[3];
+        }
+    } else {
+        querynode = quadtree_search_parentnode(tree->root, node_parent_q);
+        quadtree_search_nearest_point(tree, querynode);
+    }
+
+    return NULL;
+}
+
+
+double
+compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) {
+    double deltaY = query_point->y - point->y;
+    double deltaX = query_point->x - point->x;
+    double distance = 0;
+
+    if(deltaY < 0) {
+        deltaY = - deltaY;
+    }
+
+    if(deltaX < 0) {
+        deltaX = - deltaX;
+    }
+
+    distance = sqrt(pow(deltaX, 2) + pow(deltaY, 2));
+
+    return distance;
+}
+
+double
+compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se) {
+    double distance = distance_nw;
+
+    double d[4] = {distance_nw, distance_ne, distance_sw, distance_se};
+
+    for(int i = 0; i < 4; ++i) {
+        if(distance >= d[i]) {
+            distance = d[i];
+        }
+    }
+
+    return distance;
+}
 
