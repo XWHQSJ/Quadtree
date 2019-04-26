@@ -226,9 +226,6 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     it_point->x = x;
     it_point->y = y;
 
-    if(!root) {
-        return NULL;
-    }
 
     if (node_contains_(root, it_point)) {
         if (node_contains_(root->nw, it_point)) {
@@ -258,9 +255,9 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
                 (root->se->ne == NULL) &&
                 (root->se->sw == NULL) &&
                 (root->se->se == NULL)) {
-                return root->se;
+                return root->sw;
             } else {
-                return quadtree_search_querynode(root->se, x, y);
+                return quadtree_search_querynode(root->sw, x, y);
             }
         }
 
@@ -269,9 +266,9 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
                 (root->sw->ne == NULL) &&
                 (root->sw->sw == NULL) &&
                 (root->sw->se == NULL)) {
-                return root->sw;
+                return root->se;
             } else {
-                return quadtree_search_querynode(root->sw, x, y);
+                return quadtree_search_querynode(root->se, x, y);
             }
         }
     } else {
@@ -288,17 +285,13 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
 quadtree_node_t *
 quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
 
-    if(!root) {
-        return NULL;
-    }
-
     if (!node_contains_node_(root, node)) {
         return NULL;
     } else {
         if (node_equal_node_(root->nw, node)) return root;
         if (node_equal_node_(root->ne, node)) return root;
-        if (node_equal_node_(root->se, node)) return root;
         if (node_equal_node_(root->sw, node)) return root;
+        if (node_equal_node_(root->se, node)) return root;
 
         if (node_contains_node_(root->nw, node)) {
             return quadtree_search_parentnode(root->nw, node);
@@ -308,12 +301,12 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
             return quadtree_search_parentnode(root->ne, node);
         }
 
-        if (node_contains_node_(root->se, node)) {
-            return quadtree_search_parentnode(root->se, node);
-        }
-
         if (node_contains_node_(root->sw, node)) {
             return quadtree_search_parentnode(root->sw, node);
+        }
+
+        if (node_contains_node_(root->se, node)) {
+            return quadtree_search_parentnode(root->se, node);
         }
     }
 
@@ -327,10 +320,6 @@ quadtree_point_t **
 quadtree_search_points(quadtree_node_t *rootnode) {
 
     pPoints = malloc(K_1 * sizeof(**pPoints));
-
-    if (!rootnode) {
-        return NULL;
-    }
 
     if (quadtree_node_isleaf(rootnode)) {
 
@@ -366,7 +355,21 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 // return the nearest point
 quadtree_point_t *
 quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
+
+    printf("querynode the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n",
+           querynode->bounds->nw->x, querynode->bounds->nw->y, querynode->bounds->se->x,
+           querynode->bounds->se->y);
+
+    printf("\nquerynode point (x, y) is (%f, %f)\n\n", querynode->point->x, querynode->point->y);
+
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
+
+    printf("querynode's parentnode the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n",
+           node_parent_q->bounds->nw->x, node_parent_q->bounds->nw->y, node_parent_q->bounds->se->x,
+           node_parent_q->bounds->se->y);
+
+    printf("\nquerynode point (x, y) is (%f, %f)\n\n", node_parent_q->sw->point->x, node_parent_q->sw->point->y);
+
 
     double distance = 0;
     double distance_nw = 0;
@@ -375,34 +378,30 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
     double distance_se = 0;
 
 
-    if(!querynode) {
-        return NULL;
-    }
-
-    if(querynode->point != NULL){
+    if (quadtree_node_isleaf(querynode)) {
         return querynode->point;
     }
 
-    if(node_parent_q != NULL) {
-        if( node_parent_q->nw->point != NULL) {
+    if (quadtree_node_ispointer(node_parent_q)) {
+        if (quadtree_node_isleaf(node_parent_q->nw)) {
             distance_nw = compute_point_distance(node_parent_q->nw->point, querynode->point);
 
             pPoints[0] = node_parent_q->nw->point;
         }
 
-        if (node_parent_q->ne->point != NULL) {
+        if (quadtree_node_isleaf(node_parent_q->ne)) {
             distance_ne = compute_point_distance(node_parent_q->ne->point, querynode->point);
 
             pPoints[1] = node_parent_q->ne->point;
         }
 
-        if(node_parent_q->sw->point != NULL) {
+        if (quadtree_node_isleaf(node_parent_q->sw)) {
             distance_sw = compute_point_distance(node_parent_q->sw->point, querynode->point);
 
             pPoints[2] = node_parent_q->sw->point;
         }
 
-        if(node_parent_q->se->point != NULL) {
+        if (quadtree_node_isleaf(node_parent_q->se)) {
             distance_se = compute_point_distance(node_parent_q->se->point, querynode->point);
 
             pPoints[3] = node_parent_q->se->point;
@@ -419,6 +418,7 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
         } else {
             return pPoints[3];
         }
+
     } else {
         querynode = quadtree_search_parentnode(tree->root, node_parent_q);
         quadtree_search_nearest_point(tree, querynode);
@@ -434,12 +434,12 @@ compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) {
     double deltaX = query_point->x - point->x;
     double distance = 0;
 
-    if(deltaY < 0) {
-        deltaY = - deltaY;
+    if (deltaY < 0) {
+        deltaY = -deltaY;
     }
 
-    if(deltaX < 0) {
-        deltaX = - deltaX;
+    if (deltaX < 0) {
+        deltaX = -deltaX;
     }
 
     distance = sqrt(pow(deltaX, 2) + pow(deltaY, 2));
@@ -453,8 +453,8 @@ compare_point_distance(double distance_nw, double distance_ne, double distance_s
 
     double d[4] = {distance_nw, distance_ne, distance_sw, distance_se};
 
-    for(int i = 0; i < 4; ++i) {
-        if(distance >= d[i]) {
+    for (int i = 0; i < 4; ++i) {
+        if (distance >= d[i]) {
             distance = d[i];
         }
     }
