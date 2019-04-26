@@ -356,19 +356,7 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 quadtree_point_t *
 quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
 
-    printf("querynode the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n",
-           querynode->bounds->nw->x, querynode->bounds->nw->y, querynode->bounds->se->x,
-           querynode->bounds->se->y);
-
-    printf("\nquerynode point (x, y) is (%f, %f)\n\n", querynode->point->x, querynode->point->y);
-
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
-
-    printf("querynode's parentnode the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n",
-           node_parent_q->bounds->nw->x, node_parent_q->bounds->nw->y, node_parent_q->bounds->se->x,
-           node_parent_q->bounds->se->y);
-
-    printf("\nquerynode point (x, y) is (%f, %f)\n\n", node_parent_q->sw->point->x, node_parent_q->sw->point->y);
 
 
     double distance = 0;
