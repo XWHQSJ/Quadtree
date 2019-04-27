@@ -255,10 +255,10 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         if (node_contains_(root->sw, it_point)) {
             if (quadtree_node_isleaf(root->sw)) {
                 return root->sw;
-            } else if ((root->se->nw == NULL) &&
-                       (root->se->ne == NULL) &&
-                       (root->se->sw == NULL) &&
-                       (root->se->se == NULL)) {
+            } else if ((root->sw->nw == NULL) &&
+                       (root->sw->ne == NULL) &&
+                       (root->sw->sw == NULL) &&
+                       (root->sw->se == NULL)) {
                 return root->sw;
             } else {
                 return quadtree_search_querynode(root->sw, x, y);
@@ -266,12 +266,15 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         }
 
         if (node_contains_(root->se, it_point)) {
+            printf("\n\n-------------test--------------\n\n");
             if (quadtree_node_isleaf(root->se)) {
+                printf("\n\n-------------test1--------------\n\n");
                 return root->se;
-            } else if ((root->sw->nw == NULL) &&
-                       (root->sw->ne == NULL) &&
-                       (root->sw->sw == NULL) &&
-                       (root->sw->se == NULL)) {
+            } else if ((root->se->nw == NULL) &&
+                       (root->se->ne == NULL) &&
+                       (root->se->sw == NULL) &&
+                       (root->se->se == NULL)) {
+                printf("\n\n-------------test2--------------\n\n");
                 return root->se;
             } else {
                 return quadtree_search_querynode(root->se, x, y);
