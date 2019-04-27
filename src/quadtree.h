@@ -64,7 +64,7 @@ quadtree_bounds_free(quadtree_bounds_t *bounds);
 
 // NODE
 quadtree_node_t *
-quadtree_node_new();
+quadtree_node_new(double d, double d1);
 
 void
 quadtree_node_free(quadtree_node_t *node, void (*value_free)(void *));

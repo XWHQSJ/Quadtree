@@ -39,7 +39,7 @@ quadtree_node_reset(quadtree_node_t *node, void (*key_free)(void *)) {
 
 /* api */
 quadtree_node_t *
-quadtree_node_new() {
+quadtree_node_new(double d, double d1) {
     quadtree_node_t *node;
     if (!(node = malloc(sizeof(*node))))
         return NULL;
@@ -56,7 +56,7 @@ quadtree_node_new() {
 quadtree_node_t *
 quadtree_node_with_bounds(double minx, double miny, double maxx, double maxy) {
     quadtree_node_t *node;
-    if (!(node = quadtree_node_new())) return NULL;
+    if (!(node = quadtree_node_new(0, 0))) return NULL;
     if (!(node->bounds = quadtree_bounds_new())) return NULL;
     quadtree_bounds_extend(node->bounds, maxx, maxy);
     quadtree_bounds_extend(node->bounds, minx, miny);

@@ -222,17 +222,17 @@ quadtree_walk(quadtree_node_t *root, void (*descent)(quadtree_node_t *node),
 quadtree_node_t *
 quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
     quadtree_point_t *it_point;
-    it_point = malloc(sizeof(*it_point));
-    it_point->x = x;
-    it_point->y = y;
+    it_point = quadtree_point_new(x, y);
 
 
     if (node_contains_(root, it_point)) {
         if (node_contains_(root->nw, it_point)) {
-            if ((root->nw->nw == NULL) &&
-                (root->nw->ne == NULL) &&
-                (root->nw->sw == NULL) &&
-                (root->nw->se == NULL)) {
+            if(quadtree_node_isleaf(root->nw)) {
+                return root->nw;
+            } else if ((root->nw->nw == NULL) &&
+                       (root->nw->ne == NULL) &&
+                       (root->nw->sw == NULL) &&
+                       (root->nw->se == NULL)) {
                 return root->nw;
             } else {
                 return quadtree_search_querynode(root->nw, x, y);
@@ -240,10 +240,12 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         }
 
         if (node_contains_(root->ne, it_point)) {
-            if ((root->ne->nw == NULL) &&
-                (root->ne->ne == NULL) &&
-                (root->ne->sw == NULL) &&
-                (root->ne->se == NULL)) {
+            if (quadtree_node_isleaf(root->ne)) {
+                return root->ne;
+            } else if ((root->ne->nw == NULL) &&
+                       (root->ne->ne == NULL) &&
+                       (root->ne->sw == NULL) &&
+                       (root->ne->se == NULL)) {
                 return root->ne;
             } else {
                 return quadtree_search_querynode(root->ne, x, y);
@@ -251,10 +253,12 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         }
 
         if (node_contains_(root->sw, it_point)) {
-            if ((root->se->nw == NULL) &&
-                (root->se->ne == NULL) &&
-                (root->se->sw == NULL) &&
-                (root->se->se == NULL)) {
+            if (quadtree_node_isleaf(root->sw)) {
+                return root->sw;
+            } else if ((root->se->nw == NULL) &&
+                       (root->se->ne == NULL) &&
+                       (root->se->sw == NULL) &&
+                       (root->se->se == NULL)) {
                 return root->sw;
             } else {
                 return quadtree_search_querynode(root->sw, x, y);
@@ -262,10 +266,12 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y) {
         }
 
         if (node_contains_(root->se, it_point)) {
-            if ((root->sw->nw == NULL) &&
-                (root->sw->ne == NULL) &&
-                (root->sw->sw == NULL) &&
-                (root->sw->se == NULL)) {
+            if (quadtree_node_isleaf(root->se)) {
+                return root->se;
+            } else if ((root->sw->nw == NULL) &&
+                       (root->sw->ne == NULL) &&
+                       (root->sw->sw == NULL) &&
+                       (root->sw->se == NULL)) {
                 return root->se;
             } else {
                 return quadtree_search_querynode(root->se, x, y);
@@ -357,7 +363,6 @@ quadtree_point_t *
 quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
 
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
-
 
     double distance = 0;
     double distance_nw = 0;
