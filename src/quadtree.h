@@ -114,7 +114,7 @@ quadtree_point_t **
 quadtree_search_points(quadtree_node_t *rootnode);
 
 quadtree_point_t *
-quadtree_search_nearest_point(quadtree_t *tree, quadtree_point_t *querypoint);
+quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quadtree_point_t *querypoint);
 
 double
 compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point);

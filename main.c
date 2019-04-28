@@ -137,7 +137,7 @@ int main(int argc, const char *argv[]) {
     printf("test6 -- function < quadtree_point_t *quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) >\n");
     printf("------\n");
     printf("node_q2->point (x, y) is (%f, %f)\n", querypoint2->x, querypoint2->y);
-    quadtree_point_t *point_q = quadtree_search_nearest_point(tree, querypoint2);
+    quadtree_point_t *point_q = quadtree_search_nearest_point(tree, node_q2, querypoint2);
     printf("node the (x, y) is (%f, %f)\n", point_q->x, point_q->y);
     printf("------\n\n");
 

@@ -360,8 +360,7 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 // the root is tree main parent node
 // return the nearest point
 quadtree_point_t *
-quadtree_search_nearest_point(quadtree_t *tree, quadtree_point_t *querypoint) {
-    quadtree_node_t *querynode = quadtree_search_querynode(tree->root, querypoint->x, querypoint->y);
+quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quadtree_point_t *querypoint) {
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
 
     pPoints = malloc(K_1 * sizeof(**pPoints));
@@ -418,7 +417,7 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_point_t *querypoint) {
 
     } else {
         querynode = quadtree_search_parentnode(tree->root, node_parent_q);
-        return quadtree_search_nearest_point(tree, querypoint);
+        return quadtree_search_nearest_point(tree, querynode, querypoint);
     }
 }
 
