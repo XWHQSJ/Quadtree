@@ -5,10 +5,10 @@
 int
 quadtree_node_ispointer(quadtree_node_t *node) {
     return node->nw != NULL
-           && node->ne != NULL
-           && node->sw != NULL
-           && node->se != NULL
-           && !quadtree_node_isleaf(node);
+        && node->ne != NULL
+        && node->sw != NULL
+        && node->se != NULL
+        && !quadtree_node_isleaf(node);
 }
 
 int

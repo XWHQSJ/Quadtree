@@ -9,6 +9,7 @@ extern "C" {
 
 #include <stdlib.h>
 #include <math.h>
+#include <assert.h>
 
 typedef struct quadtree_point {
     double x;
@@ -122,7 +123,7 @@ double
 compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se);
 
 
-#define K_1 20
+#define K_1 10
 #define KEY 2
 
 quadtree_point_t **pPoints;
