@@ -404,7 +404,6 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quad
         }
 
         distance = compare_point_distance(tree, distance_nw, distance_ne, distance_sw, distance_se);
-        printf("distance is %f\n", distance);
 
         if (distance == distance_nw) {
             return pPoints[0];
@@ -464,5 +463,29 @@ compare_point_distance(quadtree_t *tree, double distance_nw, double distance_ne,
     }
 
     return distance;
+}
+
+
+quadtree_node_t *
+get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) {
+    double distance = compute_point_distance(point, querypoint);
+    printf("distance is %f\n", distance);
+    quadtree_node_t *new_quadrant;
+
+    double x = querypoint->x;
+    double y = querypoint->y;
+    double hw = distance;
+    double hh = distance;
+
+    if(!(new_quadrant = quadtree_node_with_bounds(x - hw, y - hh, x + hw, y + hh))) return NULL;
+
+    new_quadrant->point = querypoint;
+    new_quadrant->key = 0;
+    new_quadrant->nw = NULL;
+    new_quadrant->ne = NULL;
+    new_quadrant->sw = NULL;
+    new_quadrant->se = NULL;
+
+    return new_quadrant;
 }
 

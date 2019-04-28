@@ -122,6 +122,10 @@ compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point);
 double
 compare_point_distance(quadtree_t *tree, double distance_nw, double distance_ne, double distance_sw, double distance_se);
 
+quadtree_node_t *
+get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint);
+
+
 
 #define K_1 10
 #define KEY 2

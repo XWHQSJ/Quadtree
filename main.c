@@ -59,7 +59,7 @@ int main(int argc, const char *argv[]) {
 
     printf("------\n");
     quadtree_point_t *querypoint2 = quadtree_point_new(8.5, 3.0);
-    quadtree_node_t *node_q2 = quadtree_search_querynode(tree->root, 8.0, 3.0);
+    quadtree_node_t *node_q2 = quadtree_search_querynode(tree->root, 8.5, 3.0);
     printf("node the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n", \
             node_q2->bounds->nw->x, node_q2->bounds->nw->y, node_q2->bounds->se->x, node_q2->bounds->se->y);
     printf("node the (width, height) is (%f, %f)\n", node_q2->bounds->width, node_q2->bounds->height);
@@ -141,6 +141,15 @@ int main(int argc, const char *argv[]) {
     printf("the nearest node (x, y) is (%f, %f)\n", point_q->x, point_q->y);
     printf("------\n\n");
 
+
+    // test7 -- function < quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) >
+    // get the new quadrant who contains the query and the nearest point
+    printf("test7 -- function < quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) >\n");
+    printf("------\n");
+    quadtree_node_t *new_quadrant = get_new_quadrant(point_q, querypoint2);
+    printf("the new_quadrant bound nw (x, y) is (%f, %f)\n the new_quadrant bound se (x, y) is (%f, %f)\n", \
+            new_quadrant->bounds->nw->x, new_quadrant->bounds->nw->y, new_quadrant->bounds->se->x, new_quadrant->bounds->se->y);
+    printf("------\n\n");
 
     // quadtree_walk(tree->root, ascent, descent);
     quadtree_free(tree);
