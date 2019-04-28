@@ -377,7 +377,7 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quad
     } else if (node_parent_q->nw != NULL ||
                node_parent_q->ne != NULL ||
                node_parent_q->sw != NULL ||
-               node_parent_q->se != NULL ) {
+               node_parent_q->se != NULL) {
 
         if (quadtree_node_isleaf(node_parent_q->nw)) {
             distance_nw = compute_point_distance(node_parent_q->nw->point, querypoint);
@@ -403,15 +403,22 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quad
             pPoints[3] = node_parent_q->se->point;
         }
 
-        distance = compare_point_distance(distance_nw, distance_ne, distance_sw, distance_se);
+        distance = compare_point_distance(tree, distance_nw, distance_ne, distance_sw, distance_se);
+        printf("distance is %f\n", distance);
 
         if (distance == distance_nw) {
             return pPoints[0];
-        } else if (distance == distance_ne) {
+        }
+
+        if (distance == distance_ne) {
             return pPoints[1];
-        } else if (distance == distance_sw) {
+        }
+
+        if (distance == distance_sw) {
             return pPoints[2];
-        } else if (distance == distance_se) {
+        }
+
+        if (distance == distance_se) {
             return pPoints[3];
         }
 
@@ -443,14 +450,16 @@ compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) {
 }
 
 double
-compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se) {
-    double distance = distance_nw;
+compare_point_distance(quadtree_t *tree, double distance_nw, double distance_ne, double distance_sw, double distance_se) {
+    double distance = sqrt(pow(tree->root->bounds->width, 2) + pow(tree->root->bounds->height, 2));
 
     double d[4] = {distance_nw, distance_ne, distance_sw, distance_se};
 
     for (int i = 0; i < 4; ++i) {
-        if (distance >= d[i]) {
-            distance = d[i];
+        if (d[i] > 0) {
+            if (distance >= d[i]) {
+                distance = d[i];
+            }
         }
     }
 

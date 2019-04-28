@@ -120,7 +120,7 @@ double
 compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point);
 
 double
-compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se);
+compare_point_distance(quadtree_t *tree, double distance_nw, double distance_ne, double distance_sw, double distance_se);
 
 
 #define K_1 10
