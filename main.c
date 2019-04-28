@@ -58,6 +58,7 @@ int main(int argc, const char *argv[]) {
     printf("------\n");
 
     printf("------\n");
+    quadtree_point_t *querypoint2 = quadtree_point_new(8.0, 3.0);
     quadtree_node_t *node_q2 = quadtree_search_querynode(tree->root, 8.0, 3.0);
     printf("node the bound nw (x, y) is (%f, %f)\n and node the bound se (x, y) is (%f, %f)\n", \
             node_q2->bounds->nw->x, node_q2->bounds->nw->y, node_q2->bounds->se->x, node_q2->bounds->se->y);
@@ -111,8 +112,11 @@ int main(int argc, const char *argv[]) {
     // compute the distance between querypoint and nodepoint
     printf("test4 -- function < double compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) >\n");
     printf("------\n");
-    double distanceX = compute_point_distance(node_q1->point, node_q2->point);
-    printf("the distanceX between node_q1->point and node_q2->point is %f\n", distanceX);
+    printf("node_parent_q2 bound nw (x, y) is (%f, %f)\n node_parent_q2 bount se (x, y) is (%f, %f)\n", \
+            node_parent_q2->bounds->nw->x, node_parent_q2->bounds->nw->y, node_parent_q2->bounds->se->x, node_parent_q2->bounds->se->y);
+    printf("node_parent_q2->ne->point (x, y) is (%f, %f)\n", node_parent_q2->ne->point->x, node_parent_q2->ne->point->y);
+    double distanceX = compute_point_distance(node_q1->point, node_parent_q2->ne->point);
+    printf("the distanceX between node_q1->point and node_parent_q2->ne->point is %f\n", distanceX);
 
     double distanceY = compute_point_distance(node_q1->point, node_q3->point);
     printf("the distanceY between node_q1->point and node_q3->point is %f\n", distanceY);
@@ -132,13 +136,10 @@ int main(int argc, const char *argv[]) {
     // search the nearest point in the querynode or the parentnode
     printf("test6 -- function < quadtree_point_t *quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) >\n");
     printf("------\n");
-    quadtree_point_t *point_q = quadtree_search_nearest_point(tree, node_q2);
+    printf("node_q2->point (x, y) is (%f, %f)\n", querypoint2->x, querypoint2->y);
+    quadtree_point_t *point_q = quadtree_search_nearest_point(tree, querypoint2);
     printf("node the (x, y) is (%f, %f)\n", point_q->x, point_q->y);
     printf("------\n\n");
-
-
-
-
 
 
     // quadtree_walk(tree->root, ascent, descent);

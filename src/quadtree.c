@@ -360,16 +360,9 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 // the root is tree main parent node
 // return the nearest point
 quadtree_point_t *
-quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
-
-    printf("node_q2 bound nw is (%f, %f)\n node_q2 bound se is(%f, %f)\n", \
-            querynode->bounds->nw->x, querynode->bounds->nw->y, querynode->bounds->se->x, querynode->bounds->se->y);
-
+quadtree_search_nearest_point(quadtree_t *tree, quadtree_point_t *querypoint) {
+    quadtree_node_t *querynode = quadtree_search_querynode(tree->root, querypoint->x, querypoint->y);
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
-
-    printf("node_q2_parent bound nw is (%f, %f)\n node_q2_parent se is (%f, %f)\n", \
-            node_parent_q->bounds->nw->x, node_parent_q->bounds->nw->y, node_parent_q->bounds->se->x,
-           node_parent_q->bounds->se->y);
 
     pPoints = malloc(K_1 * sizeof(**pPoints));
 
@@ -381,59 +374,34 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
 
 
     if (quadtree_node_isleaf(querynode)) {
-        printf("return querynode's point (x, y) is (%f, %f)\n", querynode->point->x, querynode->point->y);
         return querynode->point;
     } else if (node_parent_q->nw != NULL ||
                node_parent_q->ne != NULL ||
                node_parent_q->sw != NULL ||
                node_parent_q->se != NULL ) {
 
-        printf("this is a test -.- -.- -.- -.-\n");
-
         if (quadtree_node_isleaf(node_parent_q->nw)) {
-
-            printf("node_parent_q->nw point (x, y) is (%f, %f)\n", node_parent_q->nw->point->x, node_parent_q->nw->point->y);
-
-            distance_nw = compute_point_distance(node_parent_q->nw->point, querynode->point);
+            distance_nw = compute_point_distance(node_parent_q->nw->point, querypoint);
 
             pPoints[0] = node_parent_q->nw->point;
-
-            printf("pPoints[nw] (x, y) is (%f, %f)\n", pPoints[0]->x, pPoints[0]->y);
         }
 
         if (quadtree_node_isleaf(node_parent_q->ne)) {
-
-            printf("node_parent_q->ne point (x, y) is (%f, %f)\n", node_parent_q->ne->point->x, node_parent_q->ne->point->y);
-
-            distance_ne = compute_point_distance(node_parent_q->ne->point, querynode->point);
-
-            printf("distance_ne is %f\n", distance_ne);
+            distance_ne = compute_point_distance(node_parent_q->ne->point, querypoint);
 
             pPoints[1] = node_parent_q->ne->point;
-
-            printf("pPoints[ne] (x, y) is (%f, %f)\n", pPoints[1]->x, pPoints[1]->y);
         }
 
         if (quadtree_node_isleaf(node_parent_q->sw)) {
-
-            printf("node_parent_q->sw point (x, y) is (%f, %f)\n", node_parent_q->sw->point->x, node_parent_q->sw->point->y);
-
-            distance_sw = compute_point_distance(node_parent_q->sw->point, querynode->point);
+            distance_sw = compute_point_distance(node_parent_q->sw->point, querypoint);
 
             pPoints[2] = node_parent_q->sw->point;
-
-            printf("pPoints[sw] (x, y) is (%f, %f)\n", pPoints[2]->x, pPoints[2]->y);
         }
 
         if (quadtree_node_isleaf(node_parent_q->se)) {
-
-            printf("node_parent_q->se point (x, y) is (%f, %f)\n", node_parent_q->se->point->x, node_parent_q->se->point->y);
-
-            distance_se = compute_point_distance(node_parent_q->se->point, querynode->point);
+            distance_se = compute_point_distance(node_parent_q->se->point, querypoint);
 
             pPoints[3] = node_parent_q->se->point;
-
-            printf("pPoints[se] (x, y) is (%f, %f)\n", pPoints[3]->x, pPoints[3]->y);
         }
 
         distance = compare_point_distance(distance_nw, distance_ne, distance_sw, distance_se);
@@ -450,7 +418,7 @@ quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode) {
 
     } else {
         querynode = quadtree_search_parentnode(tree->root, node_parent_q);
-        return quadtree_search_nearest_point(tree, querynode);
+        return quadtree_search_nearest_point(tree, querypoint);
     }
 }
 
@@ -459,6 +427,7 @@ double
 compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) {
     double deltaY = query_point->y - point->y;
     double deltaX = query_point->x - point->x;
+
     double distance = 0;
 
     if (deltaY < 0) {
