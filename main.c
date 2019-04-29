@@ -99,16 +99,14 @@ int main(int argc, const char *argv[]) {
 
     // test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >
     // search the points in the parent node
-    printf("test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >\n");
-    printf("------\n");
-    quadtree_point_t **searchpoints;
-    searchpoints = quadtree_search_points(node_parent_q2);
-    free(pPoints);
-    count_point = 0;
-    for (int i = 0; i < KEY; i++) {
-        printf("node %d the (x, y) is (%f, %f)\n", i, searchpoints[i]->x, searchpoints[i]->y);
-    }
-    printf("------\n\n");
+//    printf("test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >\n");
+//    printf("------\n");
+//    quadtree_point_t **pPoints = (quadtree_point_t **)malloc(sizeof(quadtree_point_t) * K_1);
+//    quadtree_search_points(node_parent_q2, pPoints);
+//    for (int i = 0; i < KEY; ++i) {
+//        printf("node %d the (x, y) is (%f, %f)\n", i, pPoints[i]->x, pPoints[i]->y);
+//    }
+//    printf("------\n\n");
 
 
     // test4 -- function < double compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) >
@@ -151,14 +149,20 @@ int main(int argc, const char *argv[]) {
     printf("test7 -- function < quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) >\n");
     printf("------\n");
     quadtree_node_t *new_quadrant = get_new_quadrant(point_q, querypoint2);
-    free(pPoints);
-    count_point = 0;
     printf("the new_quadrant bound nw (x, y) is (%f, %f)\n the new_quadrant bound se (x, y) is (%f, %f)\n", \
             new_quadrant->bounds->nw->x, new_quadrant->bounds->nw->y, new_quadrant->bounds->se->x, new_quadrant->bounds->se->y);
     printf("------\n\n");
 
 
-
+    // test8 -- function < quadtree_point_t **get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant) >
+    // get the new points who are contained by the new quadrant
+    printf("test8 -- function < quadtree_point_t **get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant) >\n");
+    printf("------\n");
+    quadtree_point_t **newPoints = (quadtree_point_t **)malloc(sizeof(quadtree_point_t) * K_1);
+    get_new_points(tree->root, new_quadrant, newPoints);
+    printf("node the point (x, y) is (%f, %f)\n", newPoints[0]->x, newPoints[0]->y);
+    free(newPoints);
+    printf("------\n\n");
 
 
     // quadtree_walk(tree->root, ascent, descent);

@@ -322,38 +322,19 @@ quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) {
 // search points of parent node
 // the node is parent node
 // return the points in the parent node
-quadtree_point_t **
-quadtree_search_points(quadtree_node_t *rootnode) {
-
-    pPoints = malloc(K_1 * sizeof(**pPoints));
+void
+quadtree_search_points(quadtree_node_t *rootnode, quadtree_point_t **pPoints) {
 
     if (quadtree_node_isleaf(rootnode)) {
 
-        pPoints[count_point] = rootnode->point;
-        count_point++;
-    }
+        pPoints[N++] = rootnode->point;
 
-    if (rootnode->nw != NULL) {
-        return quadtree_search_points(rootnode->nw);
+    } else if (quadtree_node_ispointer(rootnode)) {
+        quadtree_search_points(rootnode->nw, pPoints);
+        quadtree_search_points(rootnode->ne, pPoints);
+        quadtree_search_points(rootnode->sw, pPoints);
+        quadtree_search_points(rootnode->se, pPoints);
     }
-
-    if (rootnode->ne != NULL) {
-        return quadtree_search_points(rootnode->ne);
-    }
-
-    if (rootnode->sw != NULL) {
-        return quadtree_search_points(rootnode->sw);
-    }
-
-    if (rootnode->se != NULL) {
-        return quadtree_search_points(rootnode->se);
-    }
-
-    if (KEY <= count_point) {
-        return pPoints;
-    }
-
-    return pPoints;
 }
 
 // search the nearest point of the query point
@@ -362,8 +343,7 @@ quadtree_search_points(quadtree_node_t *rootnode) {
 quadtree_point_t *
 quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quadtree_point_t *querypoint) {
     quadtree_node_t *node_parent_q = quadtree_search_parentnode(tree->root, querynode);
-
-    pPoints = malloc(K_1 * sizeof(**pPoints));
+    quadtree_point_t *pPoints[4];
 
     double distance = 0;
     double distance_nw = 0;
@@ -477,7 +457,6 @@ compare_point_distance(quadtree_t *tree, double *di) {
 quadtree_node_t *
 get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) {
     double distance = compute_point_distance(point, querypoint);
-    printf("distance is %f\n", distance);
     quadtree_node_t *new_quadrant;
 
     double x = querypoint->x;
@@ -497,36 +476,23 @@ get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) {
     return new_quadrant;
 }
 
-quadtree_point_t **
-get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant) {
+// get the new points who are contained by the new quadrant
+// root is the main node
+// new_quadrant is the return parameter of get_new_quadrant() function
+// newPoints is a array who stores the points, which are contained by quadrant
+void
+get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints) {
 
-    if (!root) {
-        return NULL;
-    }
-
-    pPoints = malloc(K_1 * sizeof(**pPoints));
     if (quadtree_node_isleaf(root)) {
         if (node_contains_(new_quadrant, root->point)) {
-            pPoints[count_point] = root->point;
+            newPoints[N++] = root->point;
         }
-        count_point++;
-    }
 
-    if (root->nw != NULL) {
-        return get_new_points(root->nw, new_quadrant);
+        return;
+    } else if (quadtree_node_ispointer(root)) {
+        get_new_points(root->nw, new_quadrant, newPoints);
+        get_new_points(root->ne, new_quadrant, newPoints);
+        get_new_points(root->sw, new_quadrant, newPoints);
+        get_new_points(root->se, new_quadrant, newPoints);
     }
-
-    if (root->ne != NULL) {
-        return get_new_points(root->ne, new_quadrant);
-    }
-
-    if (root->sw != NULL) {
-        return get_new_points(root->sw, new_quadrant);
-    }
-
-    if (root->se != NULL) {
-        return get_new_points(root->se, new_quadrant);
-    }
-
-    return NULL;
 }

@@ -11,6 +11,10 @@ extern "C" {
 #include <math.h>
 #include <assert.h>
 
+#define K_1 10
+#define KEY 2
+
+static int N = 0;
 
 typedef struct quadtree_point {
     double x;
@@ -44,6 +48,7 @@ typedef struct quadtree {
 
     unsigned int length;
 } quadtree_t;
+
 
 // POINT
 quadtree_point_t *
@@ -111,8 +116,8 @@ quadtree_search_querynode(quadtree_node_t *root, double x, double y);
 quadtree_node_t *
 quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node);
 
-quadtree_point_t **
-quadtree_search_points(quadtree_node_t *rootnode);
+void
+quadtree_search_points(quadtree_node_t *rootnode, quadtree_point_t **pPoints);
 
 quadtree_point_t *
 quadtree_search_nearest_point(quadtree_t *tree, quadtree_node_t *querynode, quadtree_point_t *querypoint);
@@ -126,17 +131,9 @@ compare_point_distance(quadtree_t *tree, double *di);
 quadtree_node_t *
 get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint);
 
-quadtree_point_t **
-get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant);
+void
+get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints);
 
-
-
-#define K_1 10
-#define KEY 2
-
-quadtree_point_t **pPoints;
-
-static int count_point = 0;
 
 #ifdef __cplusplus
 }
