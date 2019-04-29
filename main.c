@@ -99,13 +99,16 @@ int main(int argc, const char *argv[]) {
 
     // test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >
     // search the points in the parent node
-//    printf("test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >\n");
-//    printf("------\n");
-//    quadtree_search_points(node_parent_q2);
-//    for (int i = 0; i < KEY; i++) {
-//        printf("node %d the (x, y) is (%f, %f)\n", i, pPoints[i]->x, pPoints[i]->y);
-//    }
-//    printf("------\n\n");
+    printf("test3 -- function < quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) >\n");
+    printf("------\n");
+    quadtree_point_t **searchpoints;
+    searchpoints = quadtree_search_points(node_parent_q2);
+    free(pPoints);
+    count_point = 0;
+    for (int i = 0; i < KEY; i++) {
+        printf("node %d the (x, y) is (%f, %f)\n", i, searchpoints[i]->x, searchpoints[i]->y);
+    }
+    printf("------\n\n");
 
 
     // test4 -- function < double compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point) >
@@ -127,7 +130,8 @@ int main(int argc, const char *argv[]) {
     // compare the distances to find the smallest distance and the nearest point
     printf("test5 -- function < double compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_ne) >\n");
     printf("------\n");
-    double distanceZ = compare_point_distance(tree, distanceX, distanceY, 0, 0);
+    double di[4] = {distanceX, distanceY, 100, 100};
+    double distanceZ = compare_point_distance(tree, di);
     printf("the distanceZ is %f\n", distanceZ);
     printf("------\n\n");
 
@@ -147,9 +151,15 @@ int main(int argc, const char *argv[]) {
     printf("test7 -- function < quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint) >\n");
     printf("------\n");
     quadtree_node_t *new_quadrant = get_new_quadrant(point_q, querypoint2);
+    free(pPoints);
+    count_point = 0;
     printf("the new_quadrant bound nw (x, y) is (%f, %f)\n the new_quadrant bound se (x, y) is (%f, %f)\n", \
             new_quadrant->bounds->nw->x, new_quadrant->bounds->nw->y, new_quadrant->bounds->se->x, new_quadrant->bounds->se->y);
     printf("------\n\n");
+
+
+
+
 
     // quadtree_walk(tree->root, ascent, descent);
     quadtree_free(tree);

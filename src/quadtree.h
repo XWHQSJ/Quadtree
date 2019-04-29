@@ -11,6 +11,7 @@ extern "C" {
 #include <math.h>
 #include <assert.h>
 
+
 typedef struct quadtree_point {
     double x;
     double y;
@@ -120,10 +121,13 @@ double
 compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point);
 
 double
-compare_point_distance(quadtree_t *tree, double distance_nw, double distance_ne, double distance_sw, double distance_se);
+compare_point_distance(quadtree_t *tree, double *di);
 
 quadtree_node_t *
 get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint);
+
+quadtree_point_t **
+get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant);
 
 
 
