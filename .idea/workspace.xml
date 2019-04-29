@@ -11,34 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2509b36a-1c35-4e55-8a5e-881bfc456c3e" name="Default Changelist" comment="test function">
-      <change afterPath="$PROJECT_DIR$/ore/aes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/crypto.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/crypto.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/errors.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/flags.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/ore.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/ore.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/ore_blk.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ore/ore_blk.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_ore.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_ore_blk.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/time_ore.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/time_ore_blk.c" afterDir="false" />
+    <list default="true" id="2509b36a-1c35-4e55-8a5e-881bfc456c3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Quadtree.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Quadtree.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/quadtree_main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/quadtree.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/quadtree.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +30,29 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/time_ore.c">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="153">
+                    <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/test_ore.c">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-51">
+                    <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/quadtree_main.c">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="222">
+                  <state relative-caret-position="324">
                     <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
                     <folding>
                       <element signature="e#44#62#0" expanded="true" />
@@ -102,11 +96,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="221">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding>
+                <element signature="e#44#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/node.c" />
         <option value="$PROJECT_DIR$/src/quadtree.c" />
         <option value="$PROJECT_DIR$/src/quadtree.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -153,11 +159,6 @@
             <path>
               <item name="Quadtree" type="b2602c69:ProjectViewProjectNode" />
               <item name="Quadtree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Quadtree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Quadtree" type="462c0819:PsiDirectoryNode" />
-              <item name="ore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -217,7 +218,7 @@
       <workItem from="1555680812186" duration="2479000" />
       <workItem from="1555922770365" duration="56480000" />
       <workItem from="1556437993483" duration="23038000" />
-      <workItem from="1556540562701" duration="260000" />
+      <workItem from="1556540562701" duration="1493000" />
     </task>
     <task id="LOCAL-00001" summary="add function static int node_contains_node_(quadtree_node_t *root, quadtree_node_t *node)">
       <created>1555682674473</created>
@@ -359,20 +360,28 @@
       <option name="project" value="LOCAL" />
       <updated>1556523680246</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add ORE Algorithm">
+      <created>1556541125482</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1556541125482</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95727000" />
+    <option name="totallyTimeSpent" value="96960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917355" visible="true" weight="0.1521181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5008264" side_tool="true" weight="0.14469697" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936507" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987163" weight="0.32804233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -383,7 +392,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936507" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012837" side_tool="true" weight="0.32804233" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936507" />
-      <window_info anchor="bottom" id="CMake" order="12" visible="true" weight="0.32936507" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32936507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -446,7 +455,8 @@
     <MESSAGE value="add function and test function:&#10;quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint)" />
     <MESSAGE value="add function:&#10;quadtree_point_t ** get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant)" />
     <MESSAGE value="modify the function:&#10;void get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify the function:&#10;void get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints)" />
+    <MESSAGE value="add ORE Algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ORE Algorithm" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -508,23 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quadtree_main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
-          <folding>
-            <element signature="e#44#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_ore.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quadtree.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -567,8 +560,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quadtree_main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ore.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time_ore.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#44#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
