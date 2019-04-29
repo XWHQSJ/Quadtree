@@ -5,6 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "E:/workspace/C++/Quadtree/main.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/main.c.obj"
+  "E:/workspace/C++/Quadtree/ore/crypto.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/ore/crypto.c.obj"
+  "E:/workspace/C++/Quadtree/ore/ore.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/ore/ore.c.obj"
+  "E:/workspace/C++/Quadtree/ore/ore_blk.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj"
   "E:/workspace/C++/Quadtree/src/bounds.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/bounds.c.obj"
   "E:/workspace/C++/Quadtree/src/node.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/node.c.obj"
   "E:/workspace/C++/Quadtree/src/point.c" "E:/workspace/C++/Quadtree/cmake-build-debug/CMakeFiles/Quadtree.dir/src/point.c.obj"

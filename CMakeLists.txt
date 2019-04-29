@@ -11,4 +11,13 @@ add_executable(Quadtree
         src/point.c
         src/quadtree.c
         src/quadtree.h
+        ore/aes.h
+        ore/crypto.h
+        ore/crypto.c
+        ore/errors.h
+        ore/flags.h
+        ore/ore.h
+        ore/ore.c
+        ore/ore_blk.h
+        ore/ore_blk.c
         main.c)

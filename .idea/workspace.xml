@@ -11,23 +11,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2509b36a-1c35-4e55-8a5e-881bfc456c3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/src/bounds.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/src/node.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/src/point.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/src/quadtree.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/quadtree" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/quadtree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/quadtree.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/quadtree.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quadtree.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/quadtree.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quadtree.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/quadtree.h" afterDir="false" />
+    <list default="true" id="2509b36a-1c35-4e55-8a5e-881bfc456c3e" name="Default Changelist" comment="test function">
+      <change afterPath="$PROJECT_DIR$/ore/aes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/crypto.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/crypto.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/errors.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/flags.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/ore.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/ore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/ore_blk.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/ore_blk.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ore.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ore_blk.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/time_ore.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/time_ore_blk.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Quadtree.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Quadtree.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Quadtree.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/quadtree_main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +50,28 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/quadtree_main.c">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="222">
+                    <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+                    <folding>
+                      <element signature="e#44#62#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
     <favorites_list name="Quadtree" />
@@ -46,46 +79,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/point.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bounds.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/node.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/quadtree.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="282" column="55" selection-start-line="282" selection-start-column="55" selection-end-line="282" selection-end-column="55" />
+            <state relative-caret-position="675">
+              <caret line="475" column="24" selection-start-line="475" selection-start-column="24" selection-end-line="475" selection-end-column="24" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -96,8 +93,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quadtree.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
+            <state relative-caret-position="17">
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <folding>
+                <element signature="e#2843#2844#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -110,12 +119,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/node.c" />
+        <option value="$PROJECT_DIR$/src/quadtree.c" />
+        <option value="$PROJECT_DIR$/src/quadtree.h" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-        <option value="$PROJECT_DIR$/src/quadtree.h" />
-        <option value="$PROJECT_DIR$/src/quadtree.c" />
       </list>
     </option>
   </component>
@@ -125,10 +135,12 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="width" value="1336" />
-    <option name="height" value="723" />
+    <option name="x" value="-43" />
+    <option name="y" value="148" />
+    <option name="width" value="1616" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -145,7 +157,7 @@
             <path>
               <item name="Quadtree" type="b2602c69:ProjectViewProjectNode" />
               <item name="Quadtree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,6 +173,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\C++\Quadtree" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,23 +214,166 @@
       <workItem from="1555651331084" duration="114000" />
       <workItem from="1555651463620" duration="10403000" />
       <workItem from="1555670781543" duration="2722000" />
-      <workItem from="1555680812186" duration="1709000" />
+      <workItem from="1555680812186" duration="2479000" />
+      <workItem from="1555922770365" duration="56480000" />
+      <workItem from="1556437993483" duration="23038000" />
+      <workItem from="1556540562701" duration="260000" />
     </task>
+    <task id="LOCAL-00001" summary="add function static int node_contains_node_(quadtree_node_t *root, quadtree_node_t *node)">
+      <created>1555682674473</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555682674473</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add function quadtree_point_t *quadtree_search_points(quadtree_node_t *rootnode)">
+      <created>1555926092657</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555926092657</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add function quadtree_point_t *quadtree_search_points(quadtree_node_t *rootnode)">
+      <created>1555926413730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555926413730</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add quadtree overviews for users">
+      <created>1555926509434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555926509434</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add quadtree overviews for users">
+      <created>1555927452765</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555927452765</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add quadtree overviews for users">
+      <created>1555992445851</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555992445851</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test1 -- function &lt; quadtree_node_t *quadtree_search_querynode(quadtree_node_t *root, double x, double y) &gt;">
+      <created>1556010579829</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556010579829</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test2 -- function &lt; quadtree_node_t *quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) &gt;">
+      <created>1556013841665</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556013841665</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test3 -- function &lt; quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) &gt;">
+      <created>1556028129701</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556028129701</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add function quadtree_point_t *quadtree_search_nearset_point(quadtree_t *tree, quadtree_node_t *querynode)&#10;&#10;add function compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point)&#10;&#10;add function compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se)">
+      <created>1556205516020</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556205516020</updated>
+    </task>
+    <task id="LOCAL-00011" summary="get some change">
+      <created>1556263696927</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556263696927</updated>
+    </task>
+    <task id="LOCAL-00012" summary="some change">
+      <created>1556288921143</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556288921143</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test function">
+      <created>1556377394460</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556377394460</updated>
+    </task>
+    <task id="LOCAL-00014" summary="debug">
+      <created>1556435590091</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556435590091</updated>
+    </task>
+    <task id="LOCAL-00015" summary="debug">
+      <created>1556439309043</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1556439309043</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test function">
+      <created>1556439773413</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1556439773413</updated>
+    </task>
+    <task id="LOCAL-00017" summary="debug">
+      <created>1556441348322</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1556441348322</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add function and test function:&#10;quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint)">
+      <created>1556444376189</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1556444376189</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add function:&#10;quadtree_point_t ** get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant)">
+      <created>1556506569129</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1556506569129</updated>
+    </task>
+    <task id="LOCAL-00020" summary="modify the function:&#10;void get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints)">
+      <created>1556523680246</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1556523680246</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15179000" />
+    <option name="totallyTimeSpent" value="95727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917355" visible="true" weight="0.14634146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917355" visible="true" weight="0.1521181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5008264" side_tool="true" weight="0.14469697" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32804233" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987163" weight="0.32804233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -221,14 +381,36 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32804233" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936507" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32936507" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012837" side_tool="true" weight="0.32804233" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936507" />
+      <window_info anchor="bottom" id="CMake" order="12" visible="true" weight="0.32936507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917355" visible="true" weight="0.15019256" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008264" side_tool="true" weight="0.14469697" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987163" weight="0.32804233" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32804233" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936507" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012837" side_tool="true" weight="0.32804233" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936507" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32936507" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -248,6 +430,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add function static int node_contains_node_(quadtree_node_t *root, quadtree_node_t *node)" />
+    <MESSAGE value="add function quadtree_point_t *quadtree_search_points(quadtree_node_t *rootnode)" />
+    <MESSAGE value="add quadtree overviews for users" />
+    <MESSAGE value="test1 -- function &lt; quadtree_node_t *quadtree_search_querynode(quadtree_node_t *root, double x, double y) &gt;" />
+    <MESSAGE value="test2 -- function &lt; quadtree_node_t *quadtree_search_parentnode(quadtree_node_t *root, quadtree_node_t *node) &gt;" />
+    <MESSAGE value="test3 -- function &lt; quadtree_point_t **quadtree_search_points(quadtree_node_t *rootnode) &gt;" />
+    <MESSAGE value="add function quadtree_point_t *quadtree_search_nearset_point(quadtree_t *tree, quadtree_node_t *querynode)&#10;&#10;add function compute_point_distance(quadtree_point_t *point, quadtree_point_t *query_point)&#10;&#10;add function compare_point_distance(double distance_nw, double distance_ne, double distance_sw, double distance_se)" />
+    <MESSAGE value="get some change" />
+    <MESSAGE value="some change" />
+    <MESSAGE value="test function" />
+    <MESSAGE value="debug" />
+    <MESSAGE value="add function and test function:&#10;quadtree_node_t *get_new_quadrant(quadtree_point_t *point, quadtree_point_t *querypoint)" />
+    <MESSAGE value="add function:&#10;quadtree_point_t ** get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant)" />
+    <MESSAGE value="modify the function:&#10;void get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify the function:&#10;void get_new_points(quadtree_node_t *root, quadtree_node_t *new_quadrant, quadtree_point_t **newPoints)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -287,37 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/point.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bounds.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/node.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102" />
@@ -333,27 +501,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="51">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quadtree_main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ore.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quadtree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
+        <state relative-caret-position="17">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#2843#2844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ore/aes.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/node.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bounds.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/point.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quadtree.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="282" column="55" selection-start-line="282" selection-start-column="55" selection-end-line="282" selection-end-column="55" />
+        <state relative-caret-position="675">
+          <caret line="475" column="24" selection-start-line="475" selection-start-column="24" selection-end-line="475" selection-end-column="24" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>

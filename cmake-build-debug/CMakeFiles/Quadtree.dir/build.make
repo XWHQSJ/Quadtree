@@ -112,10 +112,52 @@ CMakeFiles/Quadtree.dir/src/quadtree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quadtree.dir/src/quadtree.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\workspace\C++\Quadtree\src\quadtree.c -o CMakeFiles\Quadtree.dir\src\quadtree.c.s
 
+CMakeFiles/Quadtree.dir/ore/crypto.c.obj: CMakeFiles/Quadtree.dir/flags.make
+CMakeFiles/Quadtree.dir/ore/crypto.c.obj: CMakeFiles/Quadtree.dir/includes_C.rsp
+CMakeFiles/Quadtree.dir/ore/crypto.c.obj: ../ore/crypto.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Quadtree.dir/ore/crypto.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Quadtree.dir\ore\crypto.c.obj   -c E:\workspace\C++\Quadtree\ore\crypto.c
+
+CMakeFiles/Quadtree.dir/ore/crypto.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Quadtree.dir/ore/crypto.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\workspace\C++\Quadtree\ore\crypto.c > CMakeFiles\Quadtree.dir\ore\crypto.c.i
+
+CMakeFiles/Quadtree.dir/ore/crypto.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quadtree.dir/ore/crypto.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\workspace\C++\Quadtree\ore\crypto.c -o CMakeFiles\Quadtree.dir\ore\crypto.c.s
+
+CMakeFiles/Quadtree.dir/ore/ore.c.obj: CMakeFiles/Quadtree.dir/flags.make
+CMakeFiles/Quadtree.dir/ore/ore.c.obj: CMakeFiles/Quadtree.dir/includes_C.rsp
+CMakeFiles/Quadtree.dir/ore/ore.c.obj: ../ore/ore.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Quadtree.dir/ore/ore.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Quadtree.dir\ore\ore.c.obj   -c E:\workspace\C++\Quadtree\ore\ore.c
+
+CMakeFiles/Quadtree.dir/ore/ore.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Quadtree.dir/ore/ore.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\workspace\C++\Quadtree\ore\ore.c > CMakeFiles\Quadtree.dir\ore\ore.c.i
+
+CMakeFiles/Quadtree.dir/ore/ore.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quadtree.dir/ore/ore.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\workspace\C++\Quadtree\ore\ore.c -o CMakeFiles\Quadtree.dir\ore\ore.c.s
+
+CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj: CMakeFiles/Quadtree.dir/flags.make
+CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj: CMakeFiles/Quadtree.dir/includes_C.rsp
+CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj: ../ore/ore_blk.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Quadtree.dir\ore\ore_blk.c.obj   -c E:\workspace\C++\Quadtree\ore\ore_blk.c
+
+CMakeFiles/Quadtree.dir/ore/ore_blk.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Quadtree.dir/ore/ore_blk.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\workspace\C++\Quadtree\ore\ore_blk.c > CMakeFiles\Quadtree.dir\ore\ore_blk.c.i
+
+CMakeFiles/Quadtree.dir/ore/ore_blk.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quadtree.dir/ore/ore_blk.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\workspace\C++\Quadtree\ore\ore_blk.c -o CMakeFiles\Quadtree.dir\ore\ore_blk.c.s
+
 CMakeFiles/Quadtree.dir/main.c.obj: CMakeFiles/Quadtree.dir/flags.make
 CMakeFiles/Quadtree.dir/main.c.obj: CMakeFiles/Quadtree.dir/includes_C.rsp
 CMakeFiles/Quadtree.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Quadtree.dir/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Quadtree.dir/main.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Quadtree.dir\main.c.obj   -c E:\workspace\C++\Quadtree\main.c
 
 CMakeFiles/Quadtree.dir/main.c.i: cmake_force
@@ -132,6 +174,9 @@ Quadtree_OBJECTS = \
 "CMakeFiles/Quadtree.dir/src/node.c.obj" \
 "CMakeFiles/Quadtree.dir/src/point.c.obj" \
 "CMakeFiles/Quadtree.dir/src/quadtree.c.obj" \
+"CMakeFiles/Quadtree.dir/ore/crypto.c.obj" \
+"CMakeFiles/Quadtree.dir/ore/ore.c.obj" \
+"CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj" \
 "CMakeFiles/Quadtree.dir/main.c.obj"
 
 # External object files for target Quadtree
@@ -141,12 +186,15 @@ Quadtree.exe: CMakeFiles/Quadtree.dir/src/bounds.c.obj
 Quadtree.exe: CMakeFiles/Quadtree.dir/src/node.c.obj
 Quadtree.exe: CMakeFiles/Quadtree.dir/src/point.c.obj
 Quadtree.exe: CMakeFiles/Quadtree.dir/src/quadtree.c.obj
+Quadtree.exe: CMakeFiles/Quadtree.dir/ore/crypto.c.obj
+Quadtree.exe: CMakeFiles/Quadtree.dir/ore/ore.c.obj
+Quadtree.exe: CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj
 Quadtree.exe: CMakeFiles/Quadtree.dir/main.c.obj
 Quadtree.exe: CMakeFiles/Quadtree.dir/build.make
 Quadtree.exe: CMakeFiles/Quadtree.dir/linklibs.rsp
 Quadtree.exe: CMakeFiles/Quadtree.dir/objects1.rsp
 Quadtree.exe: CMakeFiles/Quadtree.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Quadtree.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\workspace\C++\Quadtree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable Quadtree.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Quadtree.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

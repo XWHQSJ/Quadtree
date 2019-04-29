@@ -81,6 +81,33 @@
 		<Unit filename="E:/workspace/C++/Quadtree/main.c">
 			<Option target="Quadtree"/>
 		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/aes.h">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/crypto.c">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/crypto.h">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/errors.h">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/flags.h">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/ore.c">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/ore.h">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/ore_blk.c">
+			<Option target="Quadtree"/>
+		</Unit>
+		<Unit filename="E:/workspace/C++/Quadtree/ore/ore_blk.h">
+			<Option target="Quadtree"/>
+		</Unit>
 		<Unit filename="E:/workspace/C++/Quadtree/src/bounds.c">
 			<Option target="Quadtree"/>
 		</Unit>

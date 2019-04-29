@@ -149,6 +149,87 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/main.c.s
 .PHONY : main.c.s
 
+ore/crypto.obj: ore/crypto.c.obj
+
+.PHONY : ore/crypto.obj
+
+# target to build an object file
+ore/crypto.c.obj:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/crypto.c.obj
+.PHONY : ore/crypto.c.obj
+
+ore/crypto.i: ore/crypto.c.i
+
+.PHONY : ore/crypto.i
+
+# target to preprocess a source file
+ore/crypto.c.i:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/crypto.c.i
+.PHONY : ore/crypto.c.i
+
+ore/crypto.s: ore/crypto.c.s
+
+.PHONY : ore/crypto.s
+
+# target to generate assembly for a file
+ore/crypto.c.s:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/crypto.c.s
+.PHONY : ore/crypto.c.s
+
+ore/ore.obj: ore/ore.c.obj
+
+.PHONY : ore/ore.obj
+
+# target to build an object file
+ore/ore.c.obj:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore.c.obj
+.PHONY : ore/ore.c.obj
+
+ore/ore.i: ore/ore.c.i
+
+.PHONY : ore/ore.i
+
+# target to preprocess a source file
+ore/ore.c.i:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore.c.i
+.PHONY : ore/ore.c.i
+
+ore/ore.s: ore/ore.c.s
+
+.PHONY : ore/ore.s
+
+# target to generate assembly for a file
+ore/ore.c.s:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore.c.s
+.PHONY : ore/ore.c.s
+
+ore/ore_blk.obj: ore/ore_blk.c.obj
+
+.PHONY : ore/ore_blk.obj
+
+# target to build an object file
+ore/ore_blk.c.obj:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj
+.PHONY : ore/ore_blk.c.obj
+
+ore/ore_blk.i: ore/ore_blk.c.i
+
+.PHONY : ore/ore_blk.i
+
+# target to preprocess a source file
+ore/ore_blk.c.i:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore_blk.c.i
+.PHONY : ore/ore_blk.c.i
+
+ore/ore_blk.s: ore/ore_blk.c.s
+
+.PHONY : ore/ore_blk.s
+
+# target to generate assembly for a file
+ore/ore_blk.c.s:
+	$(MAKE) -f CMakeFiles\Quadtree.dir\build.make CMakeFiles/Quadtree.dir/ore/ore_blk.c.s
+.PHONY : ore/ore_blk.c.s
+
 src/bounds.obj: src/bounds.c.obj
 
 .PHONY : src/bounds.obj
@@ -269,6 +350,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... ore/crypto.obj
+	@echo ... ore/crypto.i
+	@echo ... ore/crypto.s
+	@echo ... ore/ore.obj
+	@echo ... ore/ore.i
+	@echo ... ore/ore.s
+	@echo ... ore/ore_blk.obj
+	@echo ... ore/ore_blk.i
+	@echo ... ore/ore_blk.s
 	@echo ... src/bounds.obj
 	@echo ... src/bounds.i
 	@echo ... src/bounds.s
