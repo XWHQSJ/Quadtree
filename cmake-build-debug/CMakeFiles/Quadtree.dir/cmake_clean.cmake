@@ -1,16 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Quadtree.dir/src/bounds.c.obj"
-  "CMakeFiles/Quadtree.dir/src/node.c.obj"
-  "CMakeFiles/Quadtree.dir/src/point.c.obj"
-  "CMakeFiles/Quadtree.dir/src/quadtree.c.obj"
-  "CMakeFiles/Quadtree.dir/ore/crypto.c.obj"
-  "CMakeFiles/Quadtree.dir/ore/ore.c.obj"
-  "CMakeFiles/Quadtree.dir/ore/ore_blk.c.obj"
-  "CMakeFiles/Quadtree.dir/main.c.obj"
+  "CMakeFiles/Quadtree.dir/src/bounds.c.o"
+  "CMakeFiles/Quadtree.dir/src/node.c.o"
+  "CMakeFiles/Quadtree.dir/src/point.c.o"
+  "CMakeFiles/Quadtree.dir/src/quadtree.c.o"
+  "CMakeFiles/Quadtree.dir/ore/crypto.c.o"
+  "CMakeFiles/Quadtree.dir/ore/ore.c.o"
+  "CMakeFiles/Quadtree.dir/ore/ore_blk.c.o"
+  "CMakeFiles/Quadtree.dir/main.c.o"
   "Quadtree.pdb"
-  "Quadtree.exe"
-  "Quadtree.exe.manifest"
-  "libQuadtree.dll.a"
+  "Quadtree"
 )
 
 # Per-language clean rules from dependency scanning.

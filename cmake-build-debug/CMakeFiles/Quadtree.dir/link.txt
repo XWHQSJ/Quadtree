@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\Quadtree.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Quadtree.dir/objects.a @CMakeFiles\Quadtree.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Quadtree.dir/objects.a -Wl,--no-whole-archive  -o Quadtree.exe -Wl,--out-implib,libQuadtree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Quadtree.dir\linklibs.rsp
+/usr/bin/cc -g   CMakeFiles/Quadtree.dir/src/bounds.c.o CMakeFiles/Quadtree.dir/src/node.c.o CMakeFiles/Quadtree.dir/src/point.c.o CMakeFiles/Quadtree.dir/src/quadtree.c.o CMakeFiles/Quadtree.dir/ore/crypto.c.o CMakeFiles/Quadtree.dir/ore/ore.c.o CMakeFiles/Quadtree.dir/ore/ore_blk.c.o CMakeFiles/Quadtree.dir/main.c.o  -o Quadtree 

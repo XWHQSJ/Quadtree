@@ -8,122 +8,120 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/workspace/C++/Quadtree/cmake-build-debug"/>
+				<Option working_dir="/home/wanhuixu/Quadtree/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Quadtree">
-				<Option output="E:/workspace/C++/Quadtree/cmake-build-debug/Quadtree.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/workspace/C++/Quadtree/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="E:/workspace/C++/Quadtree/src"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 Quadtree"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Quadtree/fast">
-				<Option output="E:/workspace/C++/Quadtree/cmake-build-debug/Quadtree.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/workspace/C++/Quadtree/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="E:/workspace/C++/Quadtree/src"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 Quadtree/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="E:/workspace/C++/Quadtree/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/workspace/C++/Quadtree/cmake-build-debug"/>
+				<Option working_dir="/home/wanhuixu/Quadtree/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/workspace/C++/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Quadtree">
+				<Option output="/home/wanhuixu/Quadtree/cmake-build-debug/Quadtree" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wanhuixu/Quadtree/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wanhuixu/Quadtree/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 Quadtree"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Quadtree/fast">
+				<Option output="/home/wanhuixu/Quadtree/cmake-build-debug/Quadtree" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wanhuixu/Quadtree/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wanhuixu/Quadtree/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 Quadtree/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wanhuixu/Quadtree/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wanhuixu/Quadtree/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/workspace/C++/Quadtree/main.c">
+		<Unit filename="/home/wanhuixu/Quadtree/main.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/aes.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/aes.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/crypto.c">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/crypto.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/crypto.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/crypto.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/errors.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/errors.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/flags.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/flags.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/ore.c">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/ore.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/ore.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/ore.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/ore_blk.c">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/ore_blk.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/ore/ore_blk.h">
+		<Unit filename="/home/wanhuixu/Quadtree/ore/ore_blk.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/src/bounds.c">
+		<Unit filename="/home/wanhuixu/Quadtree/src/bounds.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/src/node.c">
+		<Unit filename="/home/wanhuixu/Quadtree/src/node.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/src/point.c">
+		<Unit filename="/home/wanhuixu/Quadtree/src/point.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/src/quadtree.c">
+		<Unit filename="/home/wanhuixu/Quadtree/src/quadtree.c">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/src/quadtree.h">
+		<Unit filename="/home/wanhuixu/Quadtree/src/quadtree.h">
 			<Option target="Quadtree"/>
 		</Unit>
-		<Unit filename="E:/workspace/C++/Quadtree/CMakeLists.txt">
+		<Unit filename="/home/wanhuixu/Quadtree/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
