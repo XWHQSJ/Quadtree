@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/workspace/C++/Quadtree/main.c
+ore/errors.h
+E:/workspace/C++/Quadtree/ore/errors.h
+ore/flags.h
+E:/workspace/C++/Quadtree/ore/flags.h
+stdio.h
+-
+stdint.h
+-
+time.h
+-
+math.h
+-
+
+E:/workspace/C++/Quadtree/ore/errors.h
+
+E:/workspace/C++/Quadtree/ore/flags.h
+
