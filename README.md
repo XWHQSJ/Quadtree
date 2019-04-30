@@ -2,7 +2,7 @@
 Using ORE & Quadtree for Spatial Cipher Searching in Cloud Server implement in C
 
 Following pdf documents introduce the quadtree.
-quadtree.pdf and Quadtrees.pdf is overview for quadtree.
+quadtree.pdf and Quadtrees.pdf
 
 ORE -- Order-Revealing Encryption (Encryption that reveals the order of its plaintexts)
 
